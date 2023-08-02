@@ -30,8 +30,10 @@ class Section implements \JsonSerializable
     {
         return $this->fixedLength;
     }
-
-    function jsonSerialize() //for test purpose only, todo: find better way to achieve this goal
+    /**
+     * @inheritDoc
+     */
+    function jsonSerialize(): mixed //for test purpose only, todo: find better way to achieve this goal
     {
         return [$this->identifier, $this->value];
     }
